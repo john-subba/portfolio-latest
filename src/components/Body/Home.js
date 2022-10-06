@@ -1,73 +1,69 @@
 import React from "react";
-import ProfileImg from "../../assets/prof.jpeg";
-import { FaChevronRight } from "react-icons/fa";
-import Sybazzar from "../../assets/logo/sybazzar.png";
-import Upakart from "../../assets/logo/upakart.png";
-import Saathimart from "../../assets/logo/sathimart.png";
-import Commerce from "../../assets/logo/waftcommerce.svg";
-import SamsungPlaza from "../../assets/logo/samsungplaza.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+// import ProfileImg from "../../assets/prof.jpeg";
+// import { FaChevronRight } from "react-icons/fa";
+// import Sybazzar from "../../assets/logo/sybazzar.png";
+// import Upakart from "../../assets/logo/upakart.png";
+// import Saathimart from "../../assets/logo/sathimart.png";
+// import Commerce from "../../assets/logo/waftcommerce.svg";
+// import SamsungPlaza from "../../assets/logo/samsungplaza.png";
 
-const compArray = [
-  { label: "sybazaar", img: Sybazzar, link: "" },
-  { label: "upakart", img: Upakart, link: "" },
-  { label: "sathimart", img: Saathimart, link: "" },
-  { label: "commerce", img: Commerce, link: "" },
-  { label: "samsungplaza", img: SamsungPlaza, link: "" },
-];
+// const compArray = [
+//   { label: "sybazaar", img: Sybazzar, link: "" },
+//   { label: "upakart", img: Upakart, link: "" },
+//   { label: "sathimart", img: Saathimart, link: "" },
+//   { label: "commerce", img: Commerce, link: "" },
+//   { label: "samsungplaza", img: SamsungPlaza, link: "" },
+// ];
+
+var settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+};
 
 const Home = () => {
   return (
     <>
-      <div className="flex justify-between items-center gap-40 mt-10">
-        <div>
-          <div className="text-5xl mb-8 font-bold tracking-wide flex flex-col">
-            <span className="head-tag text-2xl">&lt;head&gt;</span>
-            <span className="ml-4">Senlop Subba</span>
-            <span className="head-tag text-2xl">&lt;/head&gt;</span>
-          </div>
-          <p className="mb-8 flex flex-col">
-            <span className="head-tag text-2xl">&lt;body&gt;</span>
-            <span className="ml-2 text-sm">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book.
-            </span>
-            <span className="head-tag text-2xl">&lt;/body&gt;</span>
-          </p>
-          <div className="flex flex-col">
-            <span className="head-tag text-2xl">&lt;button&gt;</span>
-            <button className="p-5 px-10 bg-zinc-900 rounded-md font-semibold justify-center flex gap-2 items-center shadow-lg w-2/5">
-              <span>Let's get started</span>
-              <FaChevronRight />
-            </button>
-            <span className="head-tag text-2xl">&lt;/button&gt;</span>
-          </div>
-        </div>
-        <div>
-          {/* <img
-              src={ProfileImg}
-              alt="profile"
-              width={900}
-              className="rounded-md"
-            /> */}
+      <div className="flex flex-col items-center h-full gap-8 justify-center">
+        <div className="text-6xl">Hello, I'm</div>
+        <div className="font-bold text-7xl">Senlop Subba</div>
+        <div className="uppercase text-zinc-500 tracking-wider">
+          And this is my portfolio
         </div>
       </div>
-      {/* <div className="mt-8">
-        <div>Worked With</div>
-        <div className="grid grid-cols-5 items-center mt-4 justify-items-center mb-10">
-          {compArray.map((each, index) => (
-            <img
-              key={index}
-              alt={each.label}
-              src={each.img}
-              width={200}
-              style={{ height: "70px" }}
-              className="border-zinc-600 border p-5 px-8 grayscale hover:grayscale-0 duration-100 cursor-pointer"
-            />
-          ))}
+      <div>
+        <div className="flex justify-center gap-3 items-baseline pb-10">
+          <span className="text-2xl">Featured</span>
+          <span className="text-2xl font-bold">Projects</span>
         </div>
-      </div> */}
+        <div>
+          <Slider {...settings}>
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
+        </div>
+      </div>
     </>
   );
 };
