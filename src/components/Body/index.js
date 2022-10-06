@@ -4,12 +4,14 @@ import Navbar from "../Navbar";
 
 const MainBody = () => {
   return (
-    <div className="bg-prof">
-      <div className="mx-auto max-w-6xl bg-zinc-800 bg-opacity-50 h-full">
-        <Navbar />
-        <Home />
+    <>
+      <div className="bg-prof">
+        <div className=" bg-zinc-800 bg-opacity-50  h-full">
+          <Navbar />
+        </div>
       </div>
-    </div>
+      <Home />
+    </>
   );
 };
 

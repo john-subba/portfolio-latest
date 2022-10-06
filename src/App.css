@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700;800&display=swap");
 
 body {
   @apply text-white bg-zinc-900;
   font-family: "Poppins", sans-serif;
+  font-weight: 200;
 }
 
 .head-tag {
@@ -17,4 +18,30 @@ body {
   background-position: center;
   height: 100vh;
   @apply grayscale;
+}
+
+.slider-main {
+  display: flex !important;
+  gap: 2rem !important;
+  padding: 1rem 10rem !important;
+  align-items: center;
+}
+
+.medium-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.semi-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+.btn {
+  @apply py-2 px-6 rounded-full uppercase tracking-wider duration-300 ease-in-out;
 }
