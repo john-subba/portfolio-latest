@@ -16,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 100vh;
   @apply grayscale;
 }
 
@@ -44,4 +43,24 @@ body {
 
 .btn {
   @apply py-2 px-6 rounded-full uppercase tracking-wider duration-300 ease-in-out;
+}
+
+.transition-top {
+  @apply top-0;
+  transition: top ease-in 0.3s;
+}
+
+.transition-top:hover {
+  top: -8px;
+}
+
+.navbar-colored {
+  background-color: #fff !important;
+  transition: background-color 200ms linear;
+  @apply text-zinc-900;
+}
+
+.error {
+  border-width: 2.5px;
+  border-color: rgb(213, 29, 29);
 }

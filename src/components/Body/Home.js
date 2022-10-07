@@ -17,6 +17,7 @@ import About from "./About";
 import Skills from "./Skills";
 import Educations from "./Educations";
 import Contact from "./Contact";
+import Footer from "./Footer";
 
 const compArray = [
   {
@@ -121,7 +122,7 @@ const Home = () => {
   };
 
   return (
-    <div className="mx-auto max-w-6xl">
+    <div className="mx-auto max-w-6xl" style={{ marginTop: "750px" }}>
       <div className="my-20">
         <div className="flex justify-center gap-2 items-baseline pb-10">
           <span className="text-2xl">Featured</span>
@@ -166,6 +167,7 @@ const Home = () => {
       <Skills />
       <Educations />
       <Contact />
+      <Footer />
     </div>
   );
 };
