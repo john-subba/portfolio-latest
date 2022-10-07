@@ -15,6 +15,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import About from "./About";
 import Skills from "./Skills";
+import Educations from "./Educations";
 
 const compArray = [
   {
@@ -162,7 +163,7 @@ const Home = () => {
       </div>
       <About />
       <Skills />
-      <div>Educations</div>
+      <Educations />
     </div>
   );
 };
