@@ -4,7 +4,7 @@ import ProfileImg from "../../assets/prof.jpeg";
 const About = () => {
   return (
     <div className="grid grid-cols-2 gap-6 items-center">
-      <div className="p-24">
+      <div className="p-20">
         <img src={ProfileImg} alt="profile" />
       </div>
       <div>

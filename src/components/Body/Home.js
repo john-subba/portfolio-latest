@@ -16,6 +16,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import About from "./About";
 import Skills from "./Skills";
 import Educations from "./Educations";
+import Contact from "./Contact";
 
 const compArray = [
   {
@@ -120,7 +121,7 @@ const Home = () => {
   };
 
   return (
-    <div className="mx-auto max-w-7xl">
+    <div className="mx-auto max-w-6xl">
       <div className="my-20">
         <div className="flex justify-center gap-2 items-baseline pb-10">
           <span className="text-2xl">Featured</span>
@@ -132,11 +133,11 @@ const Home = () => {
             <div className="slider-main" key={each.id}>
               <img src={each.detailImg} alt="details" className="w-60" />
               <div>
-                <div className="text-2xl medium-bold">{each.name}</div>
+                <div className="text-2xl medium-bold pb-2">{each.name}</div>
                 <div className="text-sm">
                   {showAll[each.id] === false ? (
                     <div className="flex flex-col gap-1">
-                      {each.details.substring(0, 400)}...{" "}
+                      {each.details.substring(0, 280)}...{" "}
                       <span
                         className="text-zinc-400 cursor-pointer medium-bold hover:text-white duration-100"
                         onClick={() => handleShowAll(each.id)}
@@ -164,6 +165,7 @@ const Home = () => {
       <About />
       <Skills />
       <Educations />
+      <Contact />
     </div>
   );
 };
