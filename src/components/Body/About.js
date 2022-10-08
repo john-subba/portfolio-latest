@@ -8,11 +8,11 @@ const About = () => {
         <div className="lg:p-20 p-14">
           <img src={ProfileImg} alt="profile" />
         </div>
-        <div className="md:pr-8 sm:pt-8 md:pt-0 sm:px-8 md:px-0">
+        <div className="md:pr-8 sm:pt-8 md:pt-0 sm:px-8 md:px-0 text-center md:text-left">
           <div className="pb-6 text-4xl">
             About <span className="bold">Me</span>
           </div>
-          <div className="text-zinc-400 text-sm pb-5">
+          <div className="text-zinc-400 text-sm pb-5 px-4 md:px-0">
             Diving into the world of programming without any educational
             background on IT fields was the first challenge I faced. Self
             learning from online platforms and frustation from code not working
@@ -26,7 +26,7 @@ const About = () => {
               skills/experience in the company where my skills are appreciated.
             </span>
           </div>
-          <div className="flex gap-3">
+          <div className="flex gap-3 sm:pt-6 md:pt-0 justify-center md:justify-start">
             <button className="btn text-white hover:text-black bg-zinc-700 hover:bg-white">
               Hire Me
             </button>

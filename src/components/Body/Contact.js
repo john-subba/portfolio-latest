@@ -108,8 +108,8 @@ const Contact = () => {
           <span className="text-2xl">Get</span>
           <span className="text-2xl semi-bold">In Touch</span>
         </div>
-        <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-20">
-          <div className="">
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:gap-20 gap-5 mx-auto">
+          <div>
             <div className="mb-8 text-xl">Send Me Your Details</div>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
               <input
@@ -118,7 +118,7 @@ const Contact = () => {
                 placeholder="Your Full Name"
                 className={`${
                   formError.name !== "" ? "error" : ""
-                } px-4 py-3 rounded bg-zinc-700 text-sm medium-bold focus:bg-zinc-600 outline-none`}
+                } px-4 py-3 w-full rounded bg-zinc-700 text-sm medium-bold focus:bg-zinc-600 outline-none`}
                 onChange={handleChange}
                 value={formData.name}
               />
@@ -158,7 +158,7 @@ const Contact = () => {
               </button>
             </form>
           </div>
-          <div>
+          <div className="mt-6 md:mt-0">
             <div className="mb-8 text-xl">My Contact Details</div>
             <div className="pb-4">
               <div className="text-sm tracking-wider text-blue-700 pb-2">
