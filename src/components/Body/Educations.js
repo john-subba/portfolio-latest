@@ -3,7 +3,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 
 const Educations = () => {
   return (
-    <div className="my-10 mt-40">
+    <div className="my-52">
       <div className="flex justify-center gap-2 items-baseline pb-10">
         <span className="text-2xl">My</span>
         <span className="text-2xl semi-bold">Work Experience</span>

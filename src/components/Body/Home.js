@@ -123,48 +123,50 @@ const Home = () => {
 
   return (
     <div className="mx-auto max-w-6xl" style={{ marginTop: "750px" }}>
-      <div className="my-20">
-        <div className="flex justify-center gap-2 items-baseline pb-10">
-          <span className="text-2xl">Featured</span>
-          <span className="text-2xl semi-bold">Projects</span>
-        </div>
-
-        <Slider {...settings}>
-          {compArray.map((each) => (
-            <div className="slider-main" key={each.id}>
-              <img src={each.detailImg} alt="details" className="w-60" />
-              <div>
-                <div className="text-2xl medium-bold pb-2">{each.name}</div>
-                <div className="text-sm">
-                  {showAll[each.id] === false ? (
-                    <div className="flex flex-col gap-1">
-                      {each.details.substring(0, 280)}...{" "}
-                      <span
-                        className="text-zinc-400 cursor-pointer medium-bold hover:text-white duration-100"
-                        onClick={() => handleShowAll(each.id)}
-                      >
-                        Read More...
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="flex flex-col gap-1">
-                      {each.details}{" "}
-                      <span
-                        className="text-zinc-400 cursor-pointer medium-bold hover:text-white duration-100"
-                        onClick={() => handleShowAll(each.id)}
-                      >
-                        ...Read Less
-                      </span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
-        </Slider>
-      </div>
       <About />
       <Skills />
+      <section id="recentworks">
+        <div className="py-40">
+          <div className="flex justify-center gap-2 items-baseline pb-10">
+            <span className="text-2xl">Featured</span>
+            <span className="text-2xl semi-bold">Projects</span>
+          </div>
+
+          <Slider {...settings}>
+            {compArray.map((each) => (
+              <div className="slider-main" key={each.id}>
+                <img src={each.detailImg} alt="details" className="w-60" />
+                <div>
+                  <div className="text-2xl medium-bold pb-2">{each.name}</div>
+                  <div className="text-sm">
+                    {showAll[each.id] === false ? (
+                      <div className="flex flex-col gap-1">
+                        {each.details.substring(0, 280)}...{" "}
+                        <span
+                          className="text-zinc-400 cursor-pointer medium-bold hover:text-white duration-100"
+                          onClick={() => handleShowAll(each.id)}
+                        >
+                          Read More...
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="flex flex-col gap-1">
+                        {each.details}{" "}
+                        <span
+                          className="text-zinc-400 cursor-pointer medium-bold hover:text-white duration-100"
+                          onClick={() => handleShowAll(each.id)}
+                        >
+                          ...Read Less
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </Slider>
+        </div>
+      </section>
       <Educations />
       <Contact />
       <Footer />

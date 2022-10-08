@@ -14,26 +14,28 @@ const skillsArray = [
 
 const Skills = () => {
   return (
-    <div className="my-10 mt-16">
-      <div className="flex justify-center gap-2 items-baseline pb-10">
-        <span className="text-2xl">Featured</span>
-        <span className="text-2xl semi-bold">Skills</span>
-      </div>
-      <div className="flex w-full justify-evenly items-center mb-10 mt-4">
-        {skillsArray.map((each, index) => {
-          return (
-            <div className="flex flex-col items-center gap-4" key={index}>
-              <div
-                className={`${each.color} hover:scale-125 duration-300 ease-in-out cursor-pointer text-7xl`}
-              >
-                {each.icons}
+    <section id="skills">
+      <div className="py-20 pt-24">
+        <div className="flex justify-center gap-2 items-baseline pb-10">
+          <span className="text-2xl">Featured</span>
+          <span className="text-2xl semi-bold">Skills</span>
+        </div>
+        <div className="flex w-full justify-evenly items-center mb-10 mt-4">
+          {skillsArray.map((each, index) => {
+            return (
+              <div className="flex flex-col items-center gap-4" key={index}>
+                <div
+                  className={`${each.color} hover:scale-125 duration-300 ease-in-out cursor-pointer text-7xl`}
+                >
+                  {each.icons}
+                </div>
+                <div>{each.name}</div>
               </div>
-              <div>{each.name}</div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

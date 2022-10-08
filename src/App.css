@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;500;700;800&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply text-white bg-zinc-900;
   font-family: "Poppins", sans-serif;
@@ -60,7 +64,117 @@ body {
   @apply text-zinc-900;
 }
 
+.navbar-colored button {
+  padding-bottom: 1px;
+}
+
+.navbar-colored button:hover {
+  color: darksalmon;
+  transition: color ease-in-out 0.3s;
+  @apply border-zinc-700;
+}
+
 .error {
   border-width: 2.5px;
   border-color: rgb(213, 29, 29);
+}
+
+.dot-elastic {
+  margin-left: 8px;
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #fff;
+  animation: dotElastic 1s infinite linear;
+}
+
+.dot-elastic::before,
+.dot-elastic::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-elastic::before {
+  left: -8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background-color: #fff;
+  color: #fff;
+  animation: dotElasticBefore 1s infinite linear;
+}
+
+.dot-elastic::after {
+  left: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  animation: dotElasticAfter 1s infinite linear;
+  @apply bg-white;
+  @apply text-white;
+}
+
+.loading_wrapper_black .dot-elastic,
+.loading_wrapper_black .dot-elastic::before,
+.loading_wrapper_black .dot-elastic::after {
+  @apply bg-white;
+  @apply text-white;
+}
+
+@keyframes dotElasticBefore {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1.5);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotElastic {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 1.5);
+  }
+  75% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes dotElasticAfter {
+  0% {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, 0.67);
+  }
+  75% {
+    transform: scale(1, 1.5);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
 }

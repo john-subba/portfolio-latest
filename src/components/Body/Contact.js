@@ -13,6 +13,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -50,15 +51,14 @@ const Contact = () => {
         "message",
         document.querySelector('textarea[name="message"]').value
       );
-
+      setLoading(true);
       fetch("https://getform.io/f/83db24c9-4e7d-4971-a76b-2a3e661a719b", {
         method: "POST",
         body: formData,
       })
-        .then(
-          (response) =>
-            response.status === 200 &&
-            toast.success("Thank you for submitting the form.", {
+        .then((response) => {
+          response.status === 200 &&
+            toast.success("Form Submitted Successfully.", {
               position: "bottom-left",
               autoClose: 5000,
               hideProgressBar: false,
@@ -66,9 +66,28 @@ const Contact = () => {
               pauseOnHover: true,
               draggable: true,
               progress: undefined,
-            })
-        )
-        .catch((error) => console.log(error));
+            });
+          response.status === 200 &&
+            setFormData({ name: "", email: "", message: "" });
+          response.status === 200 &&
+            setFormError({ name: "", email: "", message: "" });
+
+          response.status === 429 &&
+            toast.warn("Please wait a minute.", {
+              position: "bottom-left",
+              autoClose: 5000,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: true,
+              draggable: true,
+              progress: undefined,
+            });
+          setLoading(false);
+        })
+        .catch((error) => {
+          console.log(error);
+          setLoading(false);
+        });
     } else {
       toast.warn("Please add all required fields.", {
         position: "bottom-left",
@@ -83,7 +102,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <section id="getintotouch">
       <div className="my-10 mt-40">
         <div className="flex justify-center gap-2 items-baseline pb-10">
           <span className="text-2xl">Get</span>
@@ -124,9 +143,18 @@ const Contact = () => {
               />
               <button
                 type="submit"
-                className="btn text-white hover:text-black bg-zinc-700 hover:bg-white w-1/4"
+                className="btn text-white  bg-zinc-700 hover:bg-zinc-800 w-2/5"
               >
-                Send
+                {loading ? (
+                  <div className="flex text-center items-center justify-center">
+                    <div className="loading_wrapper">
+                      <span className=" mr-2 my-auto text-white">Sending</span>
+                    </div>
+                    <div className="dot-elastic" />
+                  </div>
+                ) : (
+                  <div>Send</div>
+                )}
               </button>
             </form>
           </div>
@@ -157,7 +185,7 @@ const Contact = () => {
         </div>
       </div>
       <ToastContainer />
-    </>
+    </section>
   );
 };
 
