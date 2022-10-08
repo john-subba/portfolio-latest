@@ -92,7 +92,7 @@ const Home = () => {
         className="absolute top-1/2 right-5 lg:right-10 z-10"
         onClick={onClick}
       >
-        <FaChevronRight className="text-white text-2xl lg:text-6xl" />
+        <FaChevronRight className="text-white text-4xl lg:text-6xl" />
       </button>
     );
   }
@@ -104,7 +104,7 @@ const Home = () => {
         className="absolute top-1/2 left-5 lg:left-10 z-10"
         onClick={onClick}
       >
-        <FaChevronLeft className="text-white text-2xl lg:text-6xl" />
+        <FaChevronLeft className="text-white text-4xl lg:text-6xl" />
       </button>
     );
   }
@@ -137,8 +137,10 @@ const Home = () => {
               <div className="slider-main" key={each.id}>
                 <img src={each.detailImg} alt="details" className="w-60" />
                 <div>
-                  <div className="text-2xl medium-bold pb-2">{each.name}</div>
-                  <div className="text-sm">
+                  <div className="lg:text-2xl md:text-xl medium-bold pb-2">
+                    {each.name}
+                  </div>
+                  <div className="lg:text-sm text-xs">
                     {showAll[each.id] === false ? (
                       <div className="flex flex-col gap-1">
                         {each.details.substring(0, 280)}...{" "}

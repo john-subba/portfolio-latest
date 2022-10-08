@@ -4,11 +4,11 @@ import ProfileImg from "../../assets/prof.jpeg";
 const About = () => {
   return (
     <section id="about">
-      <div className="grid grid-cols-2 gap-6 items-center py-28">
-        <div className="p-20">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 lg:gap-6 md:gap-4  items-center py-28">
+        <div className="lg:p-20 p-14">
           <img src={ProfileImg} alt="profile" />
         </div>
-        <div>
+        <div className="md:pr-8 sm:pt-8 md:pt-0 sm:px-8 md:px-0">
           <div className="pb-6 text-4xl">
             About <span className="bold">Me</span>
           </div>

@@ -20,7 +20,7 @@ const Skills = () => {
           <span className="text-2xl">Featured</span>
           <span className="text-2xl semi-bold">Skills</span>
         </div>
-        <div className="flex w-full justify-evenly items-center mb-10 mt-4">
+        <div className="flex flex-wrap justify-center sm:gap-10 lg:justify-evenly  w-full items-center mb-10 mt-4">
           {skillsArray.map((each, index) => {
             return (
               <div className="flex flex-col items-center gap-4" key={index}>

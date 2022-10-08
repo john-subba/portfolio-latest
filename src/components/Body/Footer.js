@@ -3,12 +3,12 @@ import { FaFacebookF, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="my-10 mt-20 flex justify-between items-center">
+    <div className="my-10 mt-20 flex justify-between items-center lg:px-4 px-8 sm:flex-col md:flex-row">
       <div>
         Copyright &#169; 2022 All rights reserved. Made with{" "}
         <span className="text-red-500 text-2xl">&#9829;</span> by Senlop Subba.
       </div>
-      <div className="flex items-center gap-4 text-2xl">
+      <div className="flex items-center gap-4 text-2xl sm:pt-8 lg:pt-0">
         <a
           target="_blank"
           href="https://www.facebook.com/profile.php?id=100011753101658"

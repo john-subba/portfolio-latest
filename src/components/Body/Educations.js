@@ -8,7 +8,7 @@ const Educations = () => {
         <span className="text-2xl">My</span>
         <span className="text-2xl semi-bold">Work Experience</span>
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-8 lg:px-0 px-8">
         <div className="p-8 bg-zinc-800 rounded-md relative transition-top">
           <div className="flex items-center gap-2 text-sm pb-4">
             <FaCalendarAlt /> <span>March 2022 - June 2022</span>

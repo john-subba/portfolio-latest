@@ -103,12 +103,12 @@ const Contact = () => {
 
   return (
     <section id="getintotouch">
-      <div className="my-10 mt-40">
+      <div className="my-10 mt-40 lg:px-4  px-8">
         <div className="flex justify-center gap-2 items-baseline pb-10">
           <span className="text-2xl">Get</span>
           <span className="text-2xl semi-bold">In Touch</span>
         </div>
-        <div className="grid grid-cols-2 gap-20">
+        <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-20">
           <div className="">
             <div className="mb-8 text-xl">Send Me Your Details</div>
             <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
