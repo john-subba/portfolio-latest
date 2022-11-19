@@ -30,16 +30,16 @@ const compArray = [
       "SYBazzar is an e-commerce marketplace that started its operation in 2022, serving various categories ranging from FMCG, apparel, and electronics inside Nepal. Sybazzar helps sellers to boost their business by providing them with a user-friendly platform, logistical services, cash handling services, product photography, warehousing, and so on. SYbazzar is focused on providing an excellent customer experience through ease-of-purchase, comprehensive customer care, and hassle-free shopping and returns experience. SYbazzar has the vision to connect local sellers to global consumers and hence impact the eCommerce industry by putting one brick at a time.",
     name: "Sybazzar",
   },
-  {
-    id: 1,
-    label: "upakart",
-    img: Upakart,
-    link: "",
-    detailImg: UpakartDetail,
-    details:
-      "UPAKART is one of the most fascinating project that has been facilitated under Digital Shikhar Pvt. Ltd. We are an online marketplace for buying and selling products. The goal is to make local products available to every people through our online marketplace and also provide customers' everyday needs at a lesser cost, with a larger selection, and more convenient services. We are ready to provide a diverse range of products and services to serve Nepal's small and medium businesses.",
-    name: "SamsungPlaza",
-  },
+  // {
+  //   id: 1,
+  //   label: "upakart",
+  //   img: Upakart,
+  //   link: "",
+  //   detailImg: UpakartDetail,
+  //   details:
+  //     "UPAKART is one of the most fascinating project that has been facilitated under Digital Shikhar Pvt. Ltd. We are an online marketplace for buying and selling products. The goal is to make local products available to every people through our online marketplace and also provide customers' everyday needs at a lesser cost, with a larger selection, and more convenient services. We are ready to provide a diverse range of products and services to serve Nepal's small and medium businesses.",
+  //   name: "SamsungPlaza",
+  // },
   {
     id: 2,
     label: "sathimart",
@@ -125,6 +125,20 @@ const Home = () => {
     <div className="mx-auto max-w-6xl" style={{ marginTop: "750px" }}>
       <About />
       <Skills />
+      <div className="grid grid-cols-4 items-center gap-4 justify-center">
+        {compArray.map((each) => (
+          <div
+            key={each.id}
+            className="border border-gray-300 grayscale hover:grayscale-0 hover:border-white duration-200 border-opacity-40 mx-auto p-4 px-8 cursor-pointer"
+          >
+            <img
+              src={each.img}
+              alt={each.label}
+              className="object-contain h-20"
+            />
+          </div>
+        ))}
+      </div>
       <section id="recentworks">
         <div className="py-40">
           <div className="flex justify-center gap-2 items-baseline pb-10">
